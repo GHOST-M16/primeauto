@@ -28,22 +28,24 @@ const ContactUs: React.FC = () => {
               <div className="group">
                 <div className="text-[9px] sm:text-[10px] text-slate-500 font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">Visit the Studio</div>
                 <p className="text-lg sm:text-xl text-white font-light leading-relaxed">
-                  No. 12, Jalan Kia Peng, <br />
-                  50450 Kuala Lumpur, Malaysia
+                  612 Jalan Riang 6,<br />
+                  Happy Garden, Jalan Kuchai Lama,<br />
+                  58200 Kuala Lumpur, Malaysia
                 </p>
-                <a href="#" className="inline-block mt-3 sm:mt-4 text-amber-500 font-bold text-xs sm:text-sm hover:underline">Open in Google Maps</a>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
+              <div className="space-y-6 sm:space-y-8">
                 <div>
-                  <div className="text-[9px] sm:text-[10px] text-slate-500 font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">Direct Link</div>
-                  <a href="https://wa.me/60123456789" className="text-base sm:text-lg text-white font-bold hover:text-amber-500 transition-colors break-all">+60 12-345 6789</a>
+                  <div className="text-[9px] sm:text-[10px] text-slate-500 font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">Contact Us</div>
+                  <div className="space-y-3 sm:space-y-4">
+                    <div>
+                      <a href="https://wa.me/60192023407" className="text-base sm:text-lg text-white font-bold hover:text-amber-500 transition-colors break-all block">Devan +60192023407</a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/60123023595" className="text-base sm:text-lg text-white font-bold hover:text-amber-500 transition-colors break-all block">KS Vinodh +60123023595</a>
+                    </div>
+                  </div>
                   <p className="text-xs text-slate-500 mt-2">Available Mon - Sat (9am - 7pm)</p>
-                </div>
-                <div>
-                  <div className="text-[9px] sm:text-[10px] text-slate-500 font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">Enquiries</div>
-                  <a href="mailto:hello@primeauto.my" className="text-base sm:text-lg text-white font-bold hover:text-amber-500 transition-colors break-all">hello@primeauto.my</a>
-                  <p className="text-xs text-slate-500 mt-2">General & Corporate Fleet</p>
                 </div>
               </div>
             </div>

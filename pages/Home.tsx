@@ -21,15 +21,17 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
         
         <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl">
           <div className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1 border border-amber-500/30 rounded-full bg-amber-500/10 backdrop-blur-sm">
-            <span className="text-amber-500 text-[9px] sm:text-[10px] font-black tracking-[0.2em] sm:tracking-[0.3em] uppercase">The Pinnacle of Automotive Care</span>
+            <span className="text-amber-500 text-[9px] sm:text-[10px] font-black tracking-[0.2em] sm:tracking-[0.3em] uppercase">Your Automotive Care Friend</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-5xl md:text-8xl font-black text-white leading-[1.1] mb-6 sm:mb-8 tracking-tighter px-2">
+          <h1 className="font-display text-3xl sm:text-5xl md:text-8xl font-black text-white leading-[1.1] mb-3 sm:mb-4 tracking-tighter px-2">
             MASTERING THE <br />
             <span className="gradient-text italic">ART OF SHINE</span>
           </h1>
+          <h2 className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-slate-300 mb-6 sm:mb-8 tracking-tight px-2">
+            True Professional On-Site Auto Detailing Specialists
+          </h2>
           <p className="text-slate-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed px-2">
-            Preserving investment-grade vehicles in Kuala Lumpur with bespoke detailing 
-            rituals and world-leading surface technologies.
+            PRIMEOTO are true professional on site auto detailing specialist taking auto care to the highest level. Our mobile ability makes it very convenient for busy auto owners who have less time to take their autos to traditional detailing shops.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-2">
             <button 
@@ -38,12 +40,6 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
             >
               <span className="relative z-10">Explore Services</span>
               <div className="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-            </button>
-            <button 
-              onClick={() => onPageChange(Page.Contact)}
-              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 border border-white/20 hover:border-amber-500 text-white font-black text-xs sm:text-sm uppercase tracking-widest rounded-full backdrop-blur-sm transition-all hover:bg-white/5"
-            >
-              Private Consultation
             </button>
           </div>
         </div>
@@ -72,32 +68,57 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
             {[
               { 
-                icon: 'fa-microscope', 
-                title: 'Surface Analysis', 
-                desc: 'Ultrasonic depth measurement and scangrip spectral analysis to determine the perfect correction strategy.'
+                image: '/headlight-restoration-1.jpg',
+                title: 'Headlight Restoration', 
+                desc: 'Restore clarity and brightness to your vehicle\'s headlights, removing oxidation and yellowing for improved visibility and appearance.'
               },
               { 
-                icon: 'fa-shield-virus', 
-                title: 'Graphene Matrix', 
-                desc: 'Utilizing next-gen Graphene infused coatings for extreme chemical resistance and hydrophobic self-cleaning.'
+                image: '/exterior polishing photo.jpg',
+                title: 'Exterior Polishing', 
+                desc: 'Our signature polishing and paint correction process carefully removes swirl marks, light scratches, and surface imperfections—restoring depth, clarity, and a flawless gloss to your vehicle\'s paintwork.'
               },
               { 
-                icon: 'fa-award', 
-                title: 'Master Craftsmen', 
-                desc: 'Technicians certified by world-leading brands, with a minimum of 5,000 hours of correction experience.'
+                image: '/interior cleaning photo.jpeg',
+                title: 'Interior Cleaning', 
+                desc: 'From fine leathers and delicate fabrics to premium interior surfaces, we use specialised products and gentle techniques to clean, condition, and protect every detail.'
               }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-6 sm:p-8 md:p-12 rounded-[1.5rem] sm:rounded-[2rem] group">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:bg-amber-500 transition-colors">
-                  <i className={`fas ${item.icon} text-amber-500 text-xl sm:text-2xl group-hover:text-black`}></i>
+              <div key={i} className="glass-card rounded-[1.5rem] sm:rounded-[2rem] group overflow-hidden">
+                <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-display uppercase tracking-tight">{item.title}</h3>
-                <p className="text-slate-400 text-sm sm:text-base leading-relaxed font-light">{item.desc}</p>
+                <div className="p-6 sm:p-8 md:p-12">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-display uppercase tracking-tight">{item.title}</h3>
+                  <p className="text-slate-400 text-sm sm:text-base leading-relaxed font-light">{item.desc}</p>
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Additional Description Section */}
+          <div className="glass p-8 sm:p-10 md:p-12 lg:p-16 rounded-[2rem] sm:rounded-[3rem]">
+            <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                At Primeoto Detailers, we go beyond the traditional car wash to deliver a truly bespoke detailing experience. Every vehicle is treated with meticulous care, guided by a deep understanding that no two finishes are the same.
+              </p>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                Our signature polishing and paint correction process is the heart of what we do. Refined over time, it is designed to carefully remove swirl marks, light scratches, and surface imperfections—restoring depth, clarity, and a flawless gloss to your vehicle's paintwork. This precision-led approach enhances the natural beauty of the finish while preserving its integrity.
+              </p>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                Inside and out, we work with the same level of attention. From fine leathers and delicate fabrics to premium interior surfaces, we use specialised products and gentle techniques to clean, condition, and protect every detail.
+              </p>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                As a small business with a big heart, Primeoto believes every vehicle owner deserves exceptional service. We take the time to understand your needs and tailor each service accordingly—delivering results that consistently exceed expectations.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -105,12 +126,11 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
       {/* Showcase / Stats */}
       <section className="bg-slate-900/40 py-12 sm:py-20 md:py-24 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 text-center">
             {[
               { val: '750+', label: 'Exotic Vehicles Protected' },
-              { val: '12', label: 'Years of Excellence' },
-              { val: '100%', label: 'Satisfaction Guarantee' },
-              { val: 'RM 10M+', label: 'Asset Value Preserved' }
+              { val: '20', label: 'Years of Experience' },
+              { val: '100%', label: 'Satisfaction Guarantee' }
             ].map((stat, i) => (
               <div key={i}>
                 <div className="text-3xl sm:text-4xl md:text-5xl font-black font-display text-white mb-1 sm:mb-2">{stat.val}</div>

@@ -25,7 +25,7 @@ const AboutUs: React.FC = () => {
           <div>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 uppercase leading-tight">Crafting Excellence Since <span className="text-amber-500">2012</span></h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              PrimeAuto KL began as a private passion project in a small garage in Ampang. Our founder, a certified automotive painter, noticed a gap in the market for truly high-end car care in Malaysia's challenging climate.
+              Primeoto Detailers began as a private passion project in a small garage in Ampang. Our founder, a certified automotive painter, noticed a gap in the market for truly high-end car care in Malaysia's challenging climate.
             </p>
             <p className="text-slate-400 text-sm sm:text-base mb-6 sm:mb-8 md:mb-10 leading-relaxed">
               Today, we operate from a state-of-the-art studio in the heart of Kuala Lumpur. We've stayed true to our roots: small-batch detailing, no compromises on products, and a obsession with perfection that borders on the fanatical.

@@ -33,11 +33,18 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
           className="flex items-center gap-1.5 sm:gap-2 cursor-pointer group"
           onClick={() => onPageChange(Page.Home)}
         >
-          <div className="bg-amber-500 p-1.5 sm:p-2 rounded-lg group-hover:bg-amber-400 transition-colors">
-            <i className="fas fa-car-side text-slate-900 text-lg sm:text-xl"></i>
-          </div>
+          <img 
+            src="/Untitled_design__2_-removebg-preview.png" 
+            alt="PRIMEOTO Logo" 
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+            onError={(e) => {
+              // Fallback to text if logo image is not found
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+            }}
+          />
           <span className="font-display font-black text-lg sm:text-xl md:text-2xl tracking-tighter">
-            PRIME<span className="text-amber-500">AUTO</span><span className="text-xs sm:text-sm font-light ml-0.5 sm:ml-1 text-slate-400">KL</span>
+            PRIME<span className="text-amber-500">OTO</span>
           </span>
         </div>
 
