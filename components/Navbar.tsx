@@ -27,17 +27,17 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-2 sm:py-3' : 'bg-transparent py-4 sm:py-6'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <div 
-          className="flex items-center gap-2 cursor-pointer group"
+          className="flex items-center gap-1.5 sm:gap-2 cursor-pointer group"
           onClick={() => onPageChange(Page.Home)}
         >
-          <div className="bg-amber-500 p-2 rounded-lg group-hover:bg-amber-400 transition-colors">
-            <i className="fas fa-car-side text-slate-900 text-xl"></i>
+          <div className="bg-amber-500 p-1.5 sm:p-2 rounded-lg group-hover:bg-amber-400 transition-colors">
+            <i className="fas fa-car-side text-slate-900 text-lg sm:text-xl"></i>
           </div>
-          <span className="font-display font-black text-2xl tracking-tighter">
-            PRIME<span className="text-amber-500">AUTO</span><span className="text-sm font-light ml-1 text-slate-400">KL</span>
+          <span className="font-display font-black text-lg sm:text-xl md:text-2xl tracking-tighter">
+            PRIME<span className="text-amber-500">AUTO</span><span className="text-xs sm:text-sm font-light ml-0.5 sm:ml-1 text-slate-400">KL</span>
           </span>
         </div>
 
@@ -64,8 +64,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-2xl text-slate-200"
+          className="md:hidden text-xl sm:text-2xl text-slate-200 p-2 -mr-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
           <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
         </button>
@@ -74,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden glass absolute top-full left-0 w-full border-t border-white/10 animate-fade-in-down">
-          <div className="flex flex-col p-6 gap-4">
+          <div className="flex flex-col p-4 sm:p-6 gap-3 sm:gap-4">
             {navLinks.map((link) => (
               <button
                 key={link.value}
@@ -82,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
                   onPageChange(link.value);
                   setIsMenuOpen(false);
                 }}
-                className={`text-left py-2 text-lg font-medium ${
+                className={`text-left py-2.5 sm:py-3 text-base sm:text-lg font-medium ${
                   currentPage === link.value ? 'text-amber-500' : 'text-slate-200'
                 }`}
               >
@@ -94,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
                 onPageChange(Page.Contact);
                 setIsMenuOpen(false);
               }}
-              className="bg-amber-500 text-slate-900 w-full py-3 rounded-xl font-bold mt-2"
+              className="bg-amber-500 text-slate-900 w-full py-3 sm:py-3.5 rounded-xl font-bold mt-2 text-sm sm:text-base"
             >
               BOOK NOW
             </button>
