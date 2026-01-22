@@ -119,38 +119,25 @@ const AboutUs: React.FC = () => {
           </div>
         </section>
 
-        {/* Equipment Showcase */}
-        <section className="glass p-6 sm:p-10 md:p-12 lg:p-16 rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem]">
-          <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 items-center">
-            <div className="md:w-1/2 w-full">
-               <h2 className="font-display text-2xl sm:text-3xl font-black mb-4 sm:mb-6 uppercase">World-Class Equipment</h2>
-               <p className="text-slate-400 text-sm sm:text-base mb-6 sm:mb-8">
-                We believe a craftsman is only as good as his tools. That's why we invest in the same gear used by luxury detailers in Europe and the US.
-               </p>
-               <ul className="space-y-3 sm:space-y-4">
-                 <li className="flex items-center gap-3 sm:gap-4 text-slate-300 text-sm sm:text-base">
-                    <div className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></div>
-                    <span>Rupes BigFoot Polishing Systems</span>
-                 </li>
-                 <li className="flex items-center gap-3 sm:gap-4 text-slate-300 text-sm sm:text-base">
-                    <div className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></div>
-                    <span>Scangrip Multimatch Inspection Lighting</span>
-                 </li>
-                 <li className="flex items-center gap-3 sm:gap-4 text-slate-300 text-sm sm:text-base">
-                    <div className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></div>
-                    <span>Industrial Grade De-Ionized Water Filtration</span>
-                 </li>
-                 <li className="flex items-center gap-3 sm:gap-4 text-slate-300 text-sm sm:text-base">
-                    <div className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></div>
-                    <span>Steam Vacuum Sanitization Units</span>
-                 </li>
-               </ul>
+        {/* Detailing Kingdom Section */}
+        <section className="glass p-8 sm:p-12 md:p-16 lg:p-20 rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] text-center mb-16 sm:mb-24 md:mb-32">
+          <div className="max-w-3xl mx-auto">
+            <div className="mb-6 sm:mb-8">
+              <div className="inline-block">
+                <div className="text-6xl sm:text-7xl md:text-8xl font-black mb-2 sm:mb-3">
+                  <span className="gradient-text">DK</span>
+                </div>
+                <div className="text-amber-500 text-sm sm:text-base font-bold uppercase tracking-widest">
+                  DETAILING KINGDOM
+                </div>
+              </div>
             </div>
-            <div className="md:w-1/2 w-full">
-              <img src="https://images.unsplash.com/photo-1621360841013-c7683c659ec6?auto=format&fit=crop&q=80&w=800" className="rounded-xl sm:rounded-2xl w-full h-64 sm:h-72 md:h-80 object-cover shadow-xl" alt="Detailing Gear" />
-            </div>
+            <p className="text-slate-300 text-base sm:text-lg md:text-xl leading-relaxed">
+              We source premium detailing products from the royal brand Detailing Kingdom to give your car the treatment it deserves, ensuring a sleek and luxurious finish every time.
+            </p>
           </div>
         </section>
+
       </div>
     </div>
   );

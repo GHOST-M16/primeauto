@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <img 
                 src="/Untitled_design__2_-removebg-preview.png" 
                 alt="PRIMEOTO Logo" 
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-16 sm:h-20 w-auto object-contain"
               />
               <span className="font-display font-black text-xl sm:text-2xl tracking-tighter">
                 PRIME<span className="text-amber-500">OTO</span>

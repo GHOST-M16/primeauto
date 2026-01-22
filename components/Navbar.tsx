@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
           <img 
             src="/Untitled_design__2_-removebg-preview.png" 
             alt="PRIMEOTO Logo" 
-            className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform group-hover:scale-105"
             onError={(e) => {
               // Fallback to text if logo image is not found
               const target = e.target as HTMLImageElement;
