@@ -61,12 +61,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
               {link.name}
             </button>
           ))}
-          <button 
-            onClick={() => onPageChange(Page.Contact)}
-            className="bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-amber-500/20"
+          <a 
+            href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2vgKK9SacbTXOJqiMYWM1IVmXN0Q1RqnP3DM3b0A_fB5T--UpyppHYGtilx7vTOWc_QJuTOFF2?gv=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-amber-500/20 inline-block"
           >
             BOOK NOW
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -97,15 +99,15 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
                 {link.name}
               </button>
             ))}
-            <button 
-              onClick={() => {
-                onPageChange(Page.Contact);
-                setIsMenuOpen(false);
-              }}
-              className="bg-amber-500 text-slate-900 w-full py-3 sm:py-3.5 rounded-xl font-bold mt-2 text-sm sm:text-base"
+            <a 
+              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2vgKK9SacbTXOJqiMYWM1IVmXN0Q1RqnP3DM3b0A_fB5T--UpyppHYGtilx7vTOWc_QJuTOFF2?gv=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+              className="bg-amber-500 text-slate-900 w-full py-3 sm:py-3.5 rounded-xl font-bold mt-2 text-sm sm:text-base text-center block"
             >
               BOOK NOW
-            </button>
+            </a>
           </div>
         </div>
       )}

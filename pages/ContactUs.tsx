@@ -1,9 +1,26 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+declare global {
+  interface Window {
+    calendar?: {
+      schedulingButton?: {
+        load: (options: {
+          url: string;
+          color: string;
+          label: string;
+          target: HTMLElement;
+        }) => void;
+      };
+    };
+  }
+}
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', car: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+  const calendarButtonRef = useRef<HTMLDivElement>(null);
+  const buttonInitialized = useRef(false);
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,6 +30,65 @@ const ContactUs: React.FC = () => {
       setFormData({ name: '', email: '', car: '', message: '' });
     }, 1500);
   };
+
+  useEffect(() => {
+    // Initialize Google Calendar scheduling button (only once)
+    const initCalendarButton = () => {
+      // Prevent multiple initializations
+      if (buttonInitialized.current) {
+        return true;
+      }
+
+      if (window.calendar?.schedulingButton && calendarButtonRef.current) {
+        try {
+          // Clear any existing content first
+          if (calendarButtonRef.current) {
+            calendarButtonRef.current.innerHTML = '';
+          }
+          
+          window.calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2vgKK9SacbTXOJqiMYWM1IVmXN0Q1RqnP3DM3b0A_fB5T--UpyppHYGtilx7vTOWc_QJuTOFF2?gv=true',
+            color: '#F09300',
+            label: 'Book an appointment',
+            target: calendarButtonRef.current,
+          });
+          
+          buttonInitialized.current = true;
+          return true;
+        } catch (error) {
+          console.error('Error loading calendar button:', error);
+        }
+      }
+      return false;
+    };
+
+    // Wait for window load event (as per Google's example)
+    const handleLoad = () => {
+      initCalendarButton();
+    };
+
+    if (document.readyState === 'complete') {
+      // Script might already be loaded
+      setTimeout(handleLoad, 100);
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    // Also try periodically in case script loads after window load (but only if not initialized)
+    const retryInterval = setInterval(() => {
+      if (initCalendarButton()) {
+        clearInterval(retryInterval);
+      }
+    }, 500);
+
+    // Stop retrying after 10 seconds
+    setTimeout(() => clearInterval(retryInterval), 10000);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearInterval(retryInterval);
+    };
+  }, []);
 
   return (
     <div className="pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-24 md:pb-32 px-4 sm:px-6 reveal-anim">
@@ -132,6 +208,20 @@ const ContactUs: React.FC = () => {
               </form>
             )}
           </div>
+        </div>
+
+        {/* Google Calendar Appointment Scheduling */}
+        <div className="mt-12 sm:mt-16 md:mt-20 text-center">
+          <span className="text-amber-500 text-xs font-black tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-4 block">Book Your Appointment</span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-4 sm:mb-6">
+            Schedule <span className="text-amber-500">Your Visit</span>
+          </h2>
+          <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-6 sm:mb-8">
+            Select a convenient time slot for your vehicle detailing service
+          </p>
+          
+          {/* Calendar Button */}
+          <div ref={calendarButtonRef} className="flex justify-center min-h-[50px] items-center"></div>
         </div>
       </div>
     </div>

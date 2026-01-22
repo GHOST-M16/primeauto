@@ -224,12 +224,14 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
 
               {/* Book Button */}
               <div className="mt-6 sm:mt-8">
-                <button 
-                  onClick={() => onPageChange(Page.Contact)}
-                  className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-amber-500 hover:bg-white text-black font-black text-xs sm:text-sm uppercase tracking-widest rounded-full transition-all transform hover:scale-105 active:scale-95"
+                <a 
+                  href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2vgKK9SacbTXOJqiMYWM1IVmXN0Q1RqnP3DM3b0A_fB5T--UpyppHYGtilx7vTOWc_QJuTOFF2?gv=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-amber-500 hover:bg-white text-black font-black text-xs sm:text-sm uppercase tracking-widest rounded-full transition-all transform hover:scale-105 active:scale-95 inline-block text-center"
                 >
                   Book {service.name}
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -286,12 +288,14 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
 
           {/* Book Button */}
           <div className="mt-6 sm:mt-8">
-            <button 
-              onClick={() => onPageChange(Page.Contact)}
-              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-amber-500 hover:bg-white text-black font-black text-xs sm:text-sm uppercase tracking-widest rounded-full transition-all transform hover:scale-105 active:scale-95"
+            <a 
+              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2vgKK9SacbTXOJqiMYWM1IVmXN0Q1RqnP3DM3b0A_fB5T--UpyppHYGtilx7vTOWc_QJuTOFF2?gv=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-amber-500 hover:bg-white text-black font-black text-xs sm:text-sm uppercase tracking-widest rounded-full transition-all transform hover:scale-105 active:scale-95 inline-block text-center"
             >
               Book Other Services
-            </button>
+            </a>
           </div>
         </div>
       </div>

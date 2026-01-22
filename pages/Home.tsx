@@ -180,12 +180,14 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
             <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 md:mb-12 max-w-xl mx-auto font-light px-2">
               Experience the definitive standard of automotive care. Your vehicle deserves the absolute best.
             </p>
-            <button 
-              onClick={() => onPageChange(Page.Contact)}
-              className="px-8 sm:px-12 md:px-14 py-4 sm:py-5 md:py-6 bg-amber-500 text-black font-black text-xs sm:text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-amber-500/20"
+            <a 
+              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2vgKK9SacbTXOJqiMYWM1IVmXN0Q1RqnP3DM3b0A_fB5T--UpyppHYGtilx7vTOWc_QJuTOFF2?gv=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 sm:px-12 md:px-14 py-4 sm:py-5 md:py-6 bg-amber-500 text-black font-black text-xs sm:text-sm uppercase tracking-widest rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-amber-500/20 inline-block"
             >
               Secure Your Slot
-            </button>
+            </a>
           </div>
         </div>
       </section>
