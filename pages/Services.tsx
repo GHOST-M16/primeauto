@@ -142,11 +142,11 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-8 mb-12 sm:mb-20 md:mb-24">
           <div className="max-w-2xl">
             <span className="text-amber-500 text-xs font-black tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-4 block">Our Services</span>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-none">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-none text-slate-900">
               Service <br /> <span className="text-amber-500">Packages</span>
             </h1>
           </div>
-          <p className="text-slate-500 max-w-sm font-light text-left md:text-right text-sm sm:text-base mt-4 md:mt-0 md:block">
+          <p className="text-slate-600 max-w-sm font-light text-left md:text-right text-sm sm:text-base mt-4 md:mt-0 md:block">
             Transparent pricing for all vehicle types. Professional detailing services tailored to your needs.
           </p>
         </div>
@@ -157,7 +157,7 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
               key={service.id}
               className="glass p-6 sm:p-8 md:p-10 lg:p-12 rounded-[2rem] sm:rounded-[3rem] border border-amber-500/20"
             >
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-6 sm:mb-8 text-white">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-6 sm:mb-8 text-slate-900">
                 {service.name}
               </h2>
 
@@ -173,16 +173,16 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
                         </h3>
                         <ul className="space-y-2 sm:space-y-3">
                           {steps.map((step, idx) => (
-                            <li key={idx} className="text-slate-300 text-sm sm:text-base leading-relaxed flex items-start gap-2">
+                            <li key={idx} className="text-slate-700 text-sm sm:text-base leading-relaxed flex items-start gap-2">
                               <span className="text-amber-500 mt-1 shrink-0">•</span>
-                              <span className={step.startsWith('  •') ? 'ml-4 text-slate-400' : ''}>{step}</span>
+                              <span className={step.startsWith('  •') ? 'ml-4 text-slate-600' : ''}>{step}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                     ))}
                     {service.note && (
-                      <p className="text-slate-400 text-sm sm:text-base italic mt-4">
+                      <p className="text-slate-600 text-sm sm:text-base italic mt-4">
                         {service.note}
                       </p>
                     )}
@@ -191,10 +191,10 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
                   // Other services have simple steps
                   <ul className="space-y-2 sm:space-y-3">
                     {service.steps.map((step, idx) => (
-                      <li key={idx} className="text-slate-300 text-sm sm:text-base leading-relaxed flex items-start gap-2">
-                        <span className="text-amber-500 mt-1 shrink-0">•</span>
-                        <span className={step.startsWith('  •') ? 'ml-4 text-slate-400' : ''}>{step}</span>
-                      </li>
+                        <li key={idx} className="text-slate-700 text-sm sm:text-base leading-relaxed flex items-start gap-2">
+                          <span className="text-amber-500 mt-1 shrink-0">•</span>
+                          <span className={step.startsWith('  •') ? 'ml-4 text-slate-600' : ''}>{step}</span>
+                        </li>
                     ))}
                   </ul>
                 )}
@@ -202,16 +202,16 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
 
               {/* Pricing Table */}
               <div className="border-t border-white/10 pt-6 sm:pt-8">
-                <h3 className="text-white font-bold text-lg sm:text-xl mb-4 sm:mb-6 uppercase tracking-wide">
+                <h3 className="text-slate-900 font-bold text-lg sm:text-xl mb-4 sm:mb-6 uppercase tracking-wide">
                   Pricing (RM)
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                   {vehicleTypes.map((vehicleType) => (
                     <div 
                       key={vehicleType}
-                      className="flex justify-between items-center p-3 sm:p-4 rounded-lg bg-white/5 border border-white/10"
+                      className="flex justify-between items-center p-3 sm:p-4 rounded-lg bg-slate-50 border border-slate-200"
                     >
-                      <span className="text-slate-300 text-xs sm:text-sm font-medium flex-1">
+                      <span className="text-slate-700 text-xs sm:text-sm font-medium flex-1">
                         {vehicleType}
                       </span>
                       <span className="text-amber-500 font-black text-sm sm:text-base ml-2">
@@ -239,7 +239,7 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
 
         {/* Other Services Section */}
         <div className="glass p-6 sm:p-8 md:p-10 lg:p-12 rounded-[2rem] sm:rounded-[3rem] border border-amber-500/20 mt-8 sm:mt-12">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-6 sm:mb-8 text-white">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-6 sm:mb-8 text-slate-900">
             OTHER SERVICES
           </h2>
 
@@ -266,9 +266,9 @@ const Services: React.FC<ServicesProps> = ({ onPageChange }) => {
                 ].map((row, idx) => (
                   <tr 
                     key={idx}
-                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                    className="border-b border-slate-200 hover:bg-slate-50 transition-colors"
                   >
-                    <td className="py-3 sm:py-4 px-3 sm:px-4 text-slate-300 text-xs sm:text-sm font-medium">
+                    <td className="py-3 sm:py-4 px-3 sm:px-4 text-slate-700 text-xs sm:text-sm font-medium">
                       {row.vehicle}
                     </td>
                     <td className="py-3 sm:py-4 px-3 sm:px-4 text-center text-amber-500 font-black text-xs sm:text-sm">

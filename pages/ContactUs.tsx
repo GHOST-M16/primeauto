@@ -96,14 +96,14 @@ const ContactUs: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 lg:gap-24">
           <div>
             <span className="text-amber-500 text-xs font-black tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-4 block">Concierge</span>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase mb-8 sm:mb-10 md:mb-12 leading-tight">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase mb-8 sm:mb-10 md:mb-12 leading-tight text-slate-900">
               Connect <br /> with <span className="text-amber-500">Us</span>
             </h1>
             
             <div className="space-y-8 sm:space-y-10 md:space-y-12">
               <div className="group">
                 <div className="text-[9px] sm:text-[10px] text-slate-500 font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">Visit the Studio</div>
-                <p className="text-lg sm:text-xl text-white font-light leading-relaxed">
+                <p className="text-lg sm:text-xl text-slate-700 font-light leading-relaxed">
                   612 Jalan Riang 6,<br />
                   Happy Garden, Jalan Kuchai Lama,<br />
                   58200 Kuala Lumpur, Malaysia
@@ -112,16 +112,16 @@ const ContactUs: React.FC = () => {
 
               <div className="space-y-6 sm:space-y-8">
                 <div>
-                  <div className="text-[9px] sm:text-[10px] text-slate-500 font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">Contact Us</div>
+                  <div className="text-[9px] sm:text-[10px] text-slate-600 font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">Contact Us</div>
                   <div className="space-y-3 sm:space-y-4">
                     <div>
-                      <a href="https://wa.me/60192023407" className="text-base sm:text-lg text-white font-bold hover:text-amber-500 transition-colors break-all block">Devan +60192023407</a>
+                      <a href="https://wa.me/60192023407" className="text-base sm:text-lg text-slate-900 font-bold hover:text-amber-500 transition-colors break-all block">Devan +60192023407</a>
                     </div>
                     <div>
-                      <a href="https://wa.me/60123023595" className="text-base sm:text-lg text-white font-bold hover:text-amber-500 transition-colors break-all block">KS Vinodh +60123023595</a>
+                      <a href="https://wa.me/60123023595" className="text-base sm:text-lg text-slate-900 font-bold hover:text-amber-500 transition-colors break-all block">KS Vinodh +60123023595</a>
                     </div>
                   </div>
-                  <p className="text-xs text-slate-500 mt-2">Available Mon - Sat (9am - 7pm)</p>
+                  <p className="text-xs text-slate-600 mt-2">Available Mon - Sat (9am - 7pm)</p>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ const ContactUs: React.FC = () => {
                   <i className="fas fa-check text-emerald-500 text-3xl sm:text-4xl"></i>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black font-display mb-3 sm:mb-4 uppercase">Request Logged</h3>
-                <p className="text-slate-400 text-sm sm:text-base font-light mb-8 sm:mb-10 px-2">Our concierge will reach out via WhatsApp to finalize your booking.</p>
+                <p className="text-slate-600 text-sm sm:text-base font-light mb-8 sm:mb-10 px-2">Our concierge will reach out via WhatsApp to finalize your booking.</p>
                 <button 
                   onClick={() => setFormStatus('idle')}
                   className="text-amber-500 font-black text-xs uppercase tracking-widest hover:underline"
@@ -151,7 +151,7 @@ const ContactUs: React.FC = () => {
                     type="text" 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:bg-white/[0.08] focus:outline-none transition-all text-white placeholder-slate-700 font-light text-sm sm:text-base"
+                    className="w-full bg-white border border-slate-300 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:bg-slate-50 focus:outline-none transition-all text-slate-900 placeholder-slate-400 font-light text-sm sm:text-base"
                     placeholder="Dato' John Smith"
                   />
                 </div>
@@ -164,7 +164,7 @@ const ContactUs: React.FC = () => {
                       type="email" 
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:outline-none transition-all text-white font-light text-sm sm:text-base"
+                      className="w-full bg-white border border-slate-300 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:outline-none transition-all text-slate-900 font-light text-sm sm:text-base"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -175,7 +175,7 @@ const ContactUs: React.FC = () => {
                       type="text" 
                       value={formData.car}
                       onChange={(e) => setFormData({...formData, car: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:outline-none transition-all text-white font-light text-sm sm:text-base"
+                      className="w-full bg-white border border-slate-300 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:outline-none transition-all text-slate-900 font-light text-sm sm:text-base"
                       placeholder="e.g. McLaren 720S"
                     />
                   </div>
@@ -187,7 +187,7 @@ const ContactUs: React.FC = () => {
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:outline-none transition-all text-white font-light resize-none text-sm sm:text-base"
+                    className="w-full bg-white border border-slate-300 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 focus:border-amber-500 focus:outline-none transition-all text-slate-900 font-light resize-none text-sm sm:text-base"
                     placeholder="Tell us about the current condition and preferred services..."
                   ></textarea>
                 </div>
@@ -213,10 +213,10 @@ const ContactUs: React.FC = () => {
         {/* Google Calendar Appointment Scheduling */}
         <div className="mt-12 sm:mt-16 md:mt-20 text-center">
           <span className="text-amber-500 text-xs font-black tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-4 block">Book Your Appointment</span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-4 sm:mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-4 sm:mb-6 text-slate-900">
             Schedule <span className="text-amber-500">Your Visit</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-6 sm:mb-8">
+          <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto mb-6 sm:mb-8">
             Select a convenient time slot for your vehicle detailing service
           </p>
           

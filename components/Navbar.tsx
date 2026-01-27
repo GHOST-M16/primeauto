@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
               key={link.value}
               onClick={() => onPageChange(link.value)}
               className={`text-sm font-medium tracking-wide hover:text-amber-500 transition-colors ${
-                currentPage === link.value ? 'text-amber-500' : 'text-slate-200'
+                currentPage === link.value ? 'text-amber-500' : 'text-slate-700'
               }`}
             >
               {link.name}
@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-xl sm:text-2xl text-slate-200 p-2 -mr-2"
+          className="md:hidden text-xl sm:text-2xl text-slate-700 p-2 -mr-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden glass absolute top-full left-0 w-full border-t border-white/10 animate-fade-in-down">
+        <div className="md:hidden glass absolute top-full left-0 w-full border-t border-slate-200 animate-fade-in-down">
           <div className="flex flex-col p-4 sm:p-6 gap-3 sm:gap-4">
             {navLinks.map((link) => (
               <button
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
                   setIsMenuOpen(false);
                 }}
                 className={`text-left py-2.5 sm:py-3 text-base sm:text-lg font-medium ${
-                  currentPage === link.value ? 'text-amber-500' : 'text-slate-200'
+                  currentPage === link.value ? 'text-amber-500' : 'text-slate-700'
                 }`}
               >
                 {link.name}

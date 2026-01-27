@@ -13,12 +13,12 @@
     <style>
       :root {
         --brand-amber: #fbbf24;
-        --bg-obsidian: #020617;
+        --bg-obsidian: #f8fafc;
       }
       body {
         font-family: 'Inter', sans-serif;
         background-color: var(--bg-obsidian);
-        color: #f8fafc;
+        color: #1e293b;
         overflow-x: hidden;
       }
       .font-display {
@@ -30,25 +30,27 @@
         color: #000;
       }
       .glass {
-        background: rgba(15, 23, 42, 0.6);
+        background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
       .glass-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .glass-card:hover {
-        border-color: rgba(251, 191, 36, 0.4);
+        border-color: rgba(251, 191, 36, 0.6);
         transform: translateY(-8px);
-        box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+        box-shadow: 0 20px 40px -20px rgba(0,0,0,0.15);
       }
       .gradient-text {
         background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .reveal-anim {
@@ -66,8 +68,8 @@
         animation: slow-zoom 20s ease-in-out infinite alternate;
       }
       ::-webkit-scrollbar { width: 6px; }
-      ::-webkit-scrollbar-track { background: #020617; }
-      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+      ::-webkit-scrollbar-track { background: #f1f5f9; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #fbbf24; }
     </style>
     <script type="importmap">

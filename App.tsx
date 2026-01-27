@@ -34,8 +34,8 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col relative">
       {/* Decorative background elements */}
-      <div className="fixed top-0 left-1/4 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
-      <div className="fixed bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/5 blur-[150px] rounded-full pointer-events-none -z-10"></div>
+      <div className="fixed top-0 left-1/4 w-[500px] h-[500px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+      <div className="fixed bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
       
       <Navbar currentPage={currentPage} onPageChange={setCurrentPage} />
       

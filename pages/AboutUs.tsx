@@ -18,33 +18,33 @@ const AboutUs: React.FC = () => {
             </div>
             <div className="absolute -bottom-6 -right-6 sm:-bottom-10 sm:-right-10 glass p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl max-w-[200px] sm:max-w-xs shadow-2xl">
               <div className="text-3xl sm:text-4xl font-black text-amber-500 mb-1 sm:mb-2">12+</div>
-              <div className="text-xs sm:text-sm text-slate-400 font-medium leading-tight">Years of mastery in automotive aesthetics.</div>
+              <div className="text-xs sm:text-sm text-slate-600 font-medium leading-tight">Years of mastery in automotive aesthetics.</div>
             </div>
           </div>
           
           <div>
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 uppercase leading-tight">Crafting Excellence Since <span className="text-amber-500">2012</span></h1>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 uppercase leading-tight text-slate-900">Crafting Excellence Since <span className="text-amber-500">2012</span></h1>
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               Primeoto Detailers began as a private passion project in a small garage in Ampang. Our founder, a certified automotive painter, noticed a gap in the market for truly high-end car care in Malaysia's challenging climate.
             </p>
-            <p className="text-slate-400 text-sm sm:text-base mb-6 sm:mb-8 md:mb-10 leading-relaxed">
+            <p className="text-slate-600 text-sm sm:text-base mb-6 sm:mb-8 md:mb-10 leading-relaxed">
               Today, we operate from a state-of-the-art studio in the heart of Kuala Lumpur. We've stayed true to our roots: small-batch detailing, no compromises on products, and a obsession with perfection that borders on the fanatical.
             </p>
             
             <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               <div>
-                <h4 className="font-bold mb-1.5 sm:mb-2 flex items-center gap-2 text-sm sm:text-base">
+                <h4 className="font-bold mb-1.5 sm:mb-2 flex items-center gap-2 text-sm sm:text-base text-slate-900">
                   <i className="fas fa-check text-amber-500 text-xs sm:text-sm"></i>
                   Precision
                 </h4>
-                <p className="text-xs text-slate-500 leading-snug">Micron-level paint correction for ultimate clarity.</p>
+                <p className="text-xs text-slate-600 leading-snug">Micron-level paint correction for ultimate clarity.</p>
               </div>
               <div>
-                <h4 className="font-bold mb-1.5 sm:mb-2 flex items-center gap-2 text-sm sm:text-base">
+                <h4 className="font-bold mb-1.5 sm:mb-2 flex items-center gap-2 text-sm sm:text-base text-slate-900">
                   <i className="fas fa-check text-amber-500 text-xs sm:text-sm"></i>
                   Technology
                 </h4>
-                <p className="text-xs text-slate-500 leading-snug">Using Gtechniq and Rupes professional systems.</p>
+                <p className="text-xs text-slate-600 leading-snug">Using Gtechniq and Rupes professional systems.</p>
               </div>
             </div>
           </div>
@@ -73,8 +73,8 @@ const AboutUs: React.FC = () => {
               <div className="w-16 h-16 sm:w-20 sm:h-20 glass rounded-full flex items-center justify-center mx-auto mb-6 sm:mb-8 border-amber-500/20">
                 <i className={`fas ${item.icon} text-2xl sm:text-3xl text-amber-500`}></i>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{item.title}</h3>
-              <p className="text-slate-400 text-sm sm:text-base leading-relaxed">{item.text}</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-slate-900">{item.title}</h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">{item.text}</p>
             </div>
           ))}
         </div>
@@ -84,7 +84,7 @@ const AboutUs: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
             <div className="relative order-2 lg:order-1">
               <div className="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 w-32 h-32 sm:w-40 sm:h-40 bg-amber-500/10 rounded-full blur-3xl"></div>
-              <div className="rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+              <div className="rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-slate-200 shadow-2xl">
                 <img 
                   src="/auto-detailing-courses.webp" 
                   alt="Professional car polishing process - master technician using precision polishing tool on glossy black surface" 
@@ -95,24 +95,24 @@ const AboutUs: React.FC = () => {
             
             <div className="order-1 lg:order-2">
               <span className="text-amber-500 text-xs font-black tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-4 block">Our Craft</span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 uppercase leading-tight">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 uppercase leading-tight text-slate-900">
                 Precision <span className="text-amber-500">Polishing</span>
               </h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                 Our certified technicians use professional-grade rotary polishers and premium compounds to achieve mirror-like finishes. Every stroke is calculated, every surface meticulously inspected under specialized lighting.
               </p>
-              <p className="text-slate-400 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-slate-600 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
                 The art of paint correction requires more than just tools—it demands an intimate understanding of paint chemistry, surface tension, and the delicate balance between removing imperfections and preserving factory clear coat integrity.
               </p>
               <div className="flex flex-wrap gap-3 sm:gap-4">
-                <div className="glass px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/10">
-                  <span className="text-xs sm:text-sm text-slate-300 font-medium">Rotary Polishers</span>
+                <div className="glass px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-slate-200">
+                  <span className="text-xs sm:text-sm text-slate-700 font-medium">Rotary Polishers</span>
                 </div>
-                <div className="glass px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/10">
-                  <span className="text-xs sm:text-sm text-slate-300 font-medium">Premium Compounds</span>
+                <div className="glass px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-slate-200">
+                  <span className="text-xs sm:text-sm text-slate-700 font-medium">Premium Compounds</span>
                 </div>
-                <div className="glass px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/10">
-                  <span className="text-xs sm:text-sm text-slate-300 font-medium">Specialized Lighting</span>
+                <div className="glass px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-slate-200">
+                  <span className="text-xs sm:text-sm text-slate-700 font-medium">Specialized Lighting</span>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ const AboutUs: React.FC = () => {
                 </div>
               </div>
             </div>
-            <p className="text-slate-300 text-base sm:text-lg md:text-xl leading-relaxed">
+            <p className="text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed">
               We source premium detailing products from the royal brand Detailing Kingdom to give your car the treatment it deserves, ensuring a sleek and luxurious finish every time.
             </p>
           </div>
