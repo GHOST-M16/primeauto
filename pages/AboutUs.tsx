@@ -11,9 +11,9 @@ const AboutUs: React.FC = () => {
             <div className="absolute -top-6 -left-6 sm:-top-10 sm:-left-10 w-32 h-32 sm:w-40 sm:h-40 bg-amber-500/10 rounded-full blur-3xl"></div>
             <div className="rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-white/10">
               <img 
-                src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200" 
-                alt="Premium car detailing studio with luxury vehicles" 
-                className="w-full h-full object-cover"
+                src="/WhatsApp Image 2025-10-25 at 5.18.01 PM.jpeg"
+                alt="Premium detailed blue sports car in studio"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 sm:-bottom-10 sm:-right-10 glass p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl max-w-[200px] sm:max-w-xs shadow-2xl">

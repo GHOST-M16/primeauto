@@ -14,9 +14,9 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20 pb-10">
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-black/40 to-black"></div>
         <img 
-          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=2000" 
-          className="absolute inset-0 w-full h-full object-cover animate-slow-zoom opacity-60"
-          alt="Luxury Auto Detailing"
+          src="/IMG-20251012-WA0028.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center animate-slow-zoom opacity-70"
+          alt="Classic Porsche detailed in studio"
         />
         
         <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl">
