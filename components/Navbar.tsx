@@ -27,11 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur border-b border-slate-200 ${
-        isScrolled ? 'py-2 sm:py-3 shadow-sm' : 'py-4 sm:py-6'
-      }`}
-    >
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-2 sm:py-3' : 'bg-transparent py-4 sm:py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <div 
           className="flex items-center gap-1.5 sm:gap-2 cursor-pointer group"
@@ -41,15 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
             src="/Untitled_design__2_-removebg-preview.png" 
             alt="PRIMEOTO Logo" 
             className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform group-hover:scale-105"
-            onError={(e) => {
-              // Fallback to text if logo image is not found
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-            }}
           />
-          <span className="font-display font-black text-lg sm:text-xl md:text-2xl tracking-tighter">
-            PRIME<span className="text-amber-500">OTO</span>
-          </span>
         </div>
 
         {/* Desktop Nav */}
@@ -59,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
               key={link.value}
               onClick={() => onPageChange(link.value)}
               className={`text-sm font-medium tracking-wide hover:text-amber-500 transition-colors ${
-                currentPage === link.value ? 'text-amber-500' : 'text-slate-700'
+                currentPage === link.value ? 'text-amber-500' : isScrolled ? 'text-slate-700' : 'text-slate-200'
               }`}
             >
               {link.name}
@@ -77,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-xl sm:text-2xl text-slate-700 p-2 -mr-2"
+          className={`md:hidden text-xl sm:text-2xl p-2 -mr-2 ${isScrolled ? 'text-slate-700' : 'text-slate-200'}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -87,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden glass absolute top-full left-0 w-full border-t border-slate-200 animate-fade-in-down">
+        <div className="md:hidden glass absolute top-full left-0 w-full border-t border-white/10 animate-fade-in-down">
           <div className="flex flex-col p-4 sm:p-6 gap-3 sm:gap-4">
             {navLinks.map((link) => (
               <button

@@ -18,9 +18,6 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                 alt="PRIMEOTO Logo" 
                 className="h-16 sm:h-20 w-auto object-contain"
               />
-              <span className="font-display font-black text-xl sm:text-2xl tracking-tighter">
-                PRIME<span className="text-amber-500">OTO</span>
-              </span>
             </div>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
               PRIMEOTO are true professional on site auto detailing specialist taking auto care to the highest level.

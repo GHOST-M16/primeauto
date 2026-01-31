@@ -20,15 +20,11 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
         />
         
         <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl">
-          <div className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1 border border-amber-500/30 rounded-full bg-amber-500/10 backdrop-blur-sm">
-            <span className="text-amber-500 text-[9px] sm:text-[10px] font-black tracking-[0.2em] sm:tracking-[0.3em] uppercase">Your Automotive Care Friend</span>
-          </div>
-          <h1 className="font-display text-3xl sm:text-5xl md:text-8xl font-black text-white leading-[1.1] mb-3 sm:mb-4 tracking-tighter px-2">
-            MASTERING THE <br />
-            <span className="gradient-text italic">ART OF SHINE</span>
+          <h1 className="font-display text-3xl sm:text-5xl md:text-8xl font-black leading-[1.1] mb-3 sm:mb-4 tracking-tighter px-2">
+            <span className="gradient-text">YOUR AUTOMOTIVE CARE FRIEND</span>
           </h1>
           <h2 className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-slate-100 mb-6 sm:mb-8 tracking-tight px-2">
-            True Professional On-Site Auto Detailing Specialists
+            True Professional On-Site Auto Detailing Specialist
           </h2>
           <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed px-2">
             PRIMEOTO are true professional on site auto detailing specialist taking auto care to the highest level. Our mobile ability makes it very convenient for busy auto owners who have less time to take their autos to traditional detailing shops.
@@ -57,8 +53,7 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 sm:gap-12 mb-12 sm:mb-20 md:mb-24">
             <div className="max-w-xl">
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6 uppercase leading-tight text-slate-900">
-                Beyond a Clean. <br />
-                <span className="text-amber-500">The Prime Standard.</span>
+                MASTERING THE ART OF SHINE
               </h2>
               <div className="h-1 w-20 bg-amber-500"></div>
             </div>
@@ -109,13 +104,13 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
               <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
                 At Primeoto Detailers, we go beyond the traditional car wash to deliver a truly bespoke detailing experience. Every vehicle is treated with meticulous care, guided by a deep understanding that no two finishes are the same.
               </p>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
                 Our signature polishing and paint correction process is the heart of what we do. Refined over time, it is designed to carefully remove swirl marks, light scratches, and surface imperfections—restoring depth, clarity, and a flawless gloss to your vehicle's paintwork. This precision-led approach enhances the natural beauty of the finish while preserving its integrity.
               </p>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
                 Inside and out, we work with the same level of attention. From fine leathers and delicate fabrics to premium interior surfaces, we use specialised products and gentle techniques to clean, condition, and protect every detail.
               </p>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
                 As a small business with a big heart, Primeoto believes every vehicle owner deserves exceptional service. We take the time to understand your needs and tailor each service accordingly—delivering results that consistently exceed expectations.
               </p>
             </div>
@@ -128,9 +123,9 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 text-center">
             {[
-              { val: '750+', label: 'Exotic Vehicles Protected' },
-              { val: '20', label: 'Years of Experience' },
-              { val: '100%', label: 'Satisfaction Guarantee' }
+              { val: '300+', label: 'Exotic Vehicles Protected' },
+              { val: '20+', label: 'Years of Experience' },
+              { val: '100%', label: 'Satisfaction Guaranteed' }
             ].map((stat, i) => (
               <div key={i}>
                 <div className="text-3xl sm:text-4xl md:text-5xl font-black font-display text-slate-900 mb-1 sm:mb-2">{stat.val}</div>
@@ -144,8 +139,8 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
       {/* Testimonials */}
       <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="font-display text-3xl sm:text-4xl font-black uppercase mb-3 sm:mb-4 text-slate-900">The Voice of Trust</h2>
-          <p className="text-slate-600 text-xs sm:text-sm tracking-widest uppercase">Endorsed by KL's Elite Enthusiasts</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-black uppercase mb-3 sm:mb-4 text-slate-900">😊 The Voice of Trust 😊</h2>
+          <p className="text-slate-600 text-xs sm:text-sm tracking-widest uppercase">Our customers say it best</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
