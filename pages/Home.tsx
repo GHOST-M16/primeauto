@@ -139,7 +139,7 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
       {/* Testimonials */}
       <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="font-display text-3xl sm:text-4xl font-black uppercase mb-3 sm:mb-4 text-slate-900">😊 The Voice of Trust 😊</h2>
+          <h2 className="font-display text-3xl sm:text-4xl font-black uppercase mb-3 sm:mb-4 text-slate-900">Smiles are around</h2>
           <p className="text-slate-600 text-xs sm:text-sm tracking-widest uppercase">Our customers say it best</p>
         </div>
         

@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onPageChange }) => {
           <img 
             src="/Untitled_design__2_-removebg-preview.png" 
             alt="PRIMEOTO Logo" 
-            className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-24 sm:h-28 md:h-32 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </div>
 

@@ -16,13 +16,10 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <img 
                 src="/Untitled_design__2_-removebg-preview.png" 
                 alt="PRIMEOTO Logo" 
-                className="h-16 sm:h-20 w-auto object-contain"
+                className="h-24 sm:h-28 w-auto object-contain"
               />
             </div>
-            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
-              PRIMEOTO are true professional on site auto detailing specialist taking auto care to the highest level.
-            </p>
-            <div className="flex gap-3 sm:gap-4">
+            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
               <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 rounded-full glass flex items-center justify-center text-slate-600 hover:text-amber-500 hover:border-amber-500 transition-all text-sm sm:text-base">
                 <i className="fab fa-instagram"></i>
               </a>
