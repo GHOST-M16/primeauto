@@ -23,9 +23,6 @@ const Home: React.FC<HomeProps> = ({ onPageChange }) => {
           <h1 className="font-display text-3xl sm:text-5xl md:text-8xl font-black leading-[1.1] mb-3 sm:mb-4 tracking-tighter px-2">
             <span className="gradient-text">YOUR AUTOMOTIVE CARE FRIEND</span>
           </h1>
-          <h2 className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-slate-100 mb-6 sm:mb-8 tracking-tight px-2">
-            True Professional On-Site Auto Detailing Specialist
-          </h2>
           <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed px-2">
             PRIMEOTO are true professional on site auto detailing specialist taking auto care to the highest level. Our mobile ability makes it very convenient for busy auto owners who have less time to take their autos to traditional detailing shops.
           </p>
